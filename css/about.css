@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Unbounded', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  color: #333;
+  font-size: 20px;
+}
+
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 45px;
+  background-color: #5F5C5C;
+  font-size: 20px;
+}
+
+.site-header span {
+  margin-right: 25px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 41px;
+  color: white;
+}
+
+.site-header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-search{
+  cursor: pointer;
+}
+
+.site-header .logo {
+  width: 150px; 
+  height: 80px; 
+  left: 50px; 
+  top: 1px; 
+  position: absolute;
+}
+
+/* Основные секции */
+.about {
+  background-color: #C3BCB6;
+  padding: 30px 5%;
+}
+
+.title1, .title2 {
+  color: black;
+  font-size: clamp(24px, 5vw, 40px);
+  font-weight: 700;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+/* Секция about1 */
+.about1 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin: 30px 0;
+}
+
+@media (min-width: 992px) {
+  .about1 {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+}
+
+.inf1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .inf1 {
+      max-width: 60%;
+      padding-right: 30px;
+  }
+}
+
+.inf_1, .inf1 span {
+  font-size: clamp(22px, 3.5vw, 32px);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.inf_1-img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Секция about2 - ИЗМЕНЕНО: картинка слева, текст справа */
+.about2 {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .about2 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+}
+
+.inf2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  order: 2; /* На мобильных - текст под картинкой */
+}
+
+@media (min-width: 1200px) {
+  .inf2 {
+      width: 50%;
+      padding-left: 1%;
+      order: 1; /* На десктопах - текст справа */
+  }
+}
+
+.inf_2 {
+  font-size: clamp(22px, 3.5vw, 32px);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-wrap: nowrap;
+}
+
+.inf_2-png {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 30px auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  order: 1; /* На мобильных - картинка сверху */
+}
+
+@media (min-width: 1200px) {
+  .inf_2-png {
+      width: 45%;
+      position: relative; /* Изменено с absolute на relative */
+      right: auto;
+      left: 0;
+      top: auto;
+      transform: none;
+      margin: 0;
+      order: 0; /* На десктопах - картинка слева */
+  }
+}
+
+/* Секция inf3 */
+.inf3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.inf_3 {
+  font-size: clamp(22px, 3.5vw, 32px);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.forum {
+  background-color: #5F5C5C;
+  color: white;
+  border: none;
+  padding: 25px 60px;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 700;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 25px 0;
+  transition: all 0.3s;
+  width: fit-content;
+}
+
+.forum:hover {
+  background-color: #4a4747;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px 0;
+  background-color: #5F5C5C;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  padding: 40px;
+}
+
+.footer-top__link {
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.footer_png {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+}
+
